@@ -4,10 +4,13 @@ import { useUserStore } from "@/app/store/useStore";
 import React from "react";
 import styles from "@/app/components/main/user/user.module.scss";
 import Flag from "react-world-flags";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const FavoritsModule = () => {
   const favorites = useUserStore((state) => state.favorites);
-
+  const { setSelectedUser } = useUserStore();
+  const router = useRouter();
   if (favorites.length === 0) {
     return <p>No favorites yet.</p>;
   }
@@ -23,10 +26,17 @@ const FavoritsModule = () => {
               alt="User"
               className={styles["user-list__avatar"]}
             />
-            <div className={styles["user-list__info"]}>
-              <p className={styles["user-list__name"]}>
+            <div
+              onClick={() => router.push(`main/user/${user.login.uuid}`)}
+              className={styles["user-list__info"]}
+            >
+              <Link
+                href={`main/user/${user.login.uuid}`}
+                onClick={() => setSelectedUser(user)}
+                className={styles["user-list__name"]}
+              >
                 {user.name.first} {user.name.last}
-              </p>
+              </Link>
               <span className={styles["user-list__username"]}>
                 {user.login.username} / {user.gender}
               </span>

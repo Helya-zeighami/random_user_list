@@ -1,0 +1,38 @@
+.download {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  &__button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &--api {
+      background-color: #2563eb;
+      color: white;
+
+      &:hover:not(:disabled) {
+        background-color: #1e40af;
+      }
+    }
+
+    &--current {
+      background-color: #16a34a;
+      color: white;
+
+      &:hover:not(:disabled) {
+        background-color: #15803d;
+      }
+    }
+  }
+}

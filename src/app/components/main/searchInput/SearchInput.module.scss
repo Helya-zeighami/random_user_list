@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  &__label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  &__select {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    background-color: white;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+  }
+}

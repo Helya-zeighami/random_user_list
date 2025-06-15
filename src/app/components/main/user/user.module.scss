@@ -1,0 +1,161 @@
+.skeletonCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.skeletonCard__block {
+  background-color: #ddd;
+  border-radius: 4px;
+  margin: 0.2rem 0;
+}
+
+.skeletonCard__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.skeletonCard__textLine {
+  height: 10px;
+  width: 120px;
+}
+
+.skeletonCard__textLong {
+  width: 200px;
+}
+
+.skeletonCard__buttonPlaceholder {
+  width: 80px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #bbb;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.user-list__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  width: 800px;
+}
+
+.user-list__left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 33.3%;
+}
+
+.user-list__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-list__info {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+}
+
+.user-list__name {
+  font-weight: 600;
+  color: #0056b3;
+  font-size: 0.95rem;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.user-list__username {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.user-list__contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  width: 33.3%;
+}
+
+.user-list__email {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-list__address {
+  color: #777;
+}
+
+.user-list__phone {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #444;
+}
+.user-list__favorite-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    background-color: #e2e8f0;
+  }
+
+  &--active {
+    background-color: #facc15;
+    color: #1e293b;
+    border-color: #eab308;
+
+    &:hover {
+      background-color: #fbbf24;
+    }
+  }
+}
+
+.user-list__flag {
+  width: 18px;
+  height: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}

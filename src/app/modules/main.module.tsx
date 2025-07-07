@@ -77,11 +77,11 @@ const MainModule = () => {
           </Button>
         )}
       </CopyButton>
-      <UserList
+      {/* <UserList
         userData={userData?.pages}
         loaderRef={loaderRef}
         isFetchingNextPage={isFetchingNextPage}
-      />
+      /> */}
     </div>
   );
 };

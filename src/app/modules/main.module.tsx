@@ -10,7 +10,6 @@ import FilterButton from "@/app/components/main/filterButton/FilterButton";
 import DownloadButton from "@/app/components/main/downloadButton/DownloadButton";
 import { useRouter } from "next/navigation";
 import styles from "@/app/components/main/user/user.module.scss";
-import { Button, CopyButton } from "@mantine/core";
 
 const MainModule = () => {
   const [nationality, setNationality] = useState("");
@@ -70,18 +69,18 @@ const MainModule = () => {
         userPages={userData?.pages ?? []}
         currentPageIndex={currentPageIndex}
       />
-      <CopyButton value="https://mantine.dev">
+      {/* <CopyButton value="https://mantine.dev">
         {({ copied, copy }) => (
           <Button color={copied ? "teal" : "blue"} onClick={copy}>
             {copied ? "Copied url" : "Copy url"}
           </Button>
         )}
-      </CopyButton>
-      {/* <UserList
+      </CopyButton> */}
+      <UserList
         userData={userData?.pages}
         loaderRef={loaderRef}
         isFetchingNextPage={isFetchingNextPage}
-      /> */}
+      />
     </div>
   );
 };
